@@ -1635,12 +1635,12 @@ body.menu-open .nav-burger span:nth-child(3) { transform: translateY(-5.5px) rot
   .h-display.sm { font-size: clamp(24px, 7vw, 34px); line-height: 1.08; }
   .lead { font-size: 15px; line-height: 1.5; margin-top: 16px; }
 
-  /* HERO — declutter, hide all scraps, smaller padding */
+  /* HERO — generous breathing room; scraps stay as faded background texture */
   .hero {
     min-height: auto;
-    padding: 40px var(--pad) 48px;
+    padding: 64px var(--pad) 80px;
   }
-  .hero-mark { margin-bottom: 18px; font-size: 10px; letter-spacing: 0.14em; }
+  .hero-mark { margin-bottom: 28px; font-size: 10px; letter-spacing: 0.14em; }
   .hero-title {
     font-size: clamp(32px, 9vw, 44px);
     line-height: 1.02;
@@ -1648,26 +1648,51 @@ body.menu-open .nav-burger span:nth-child(3) { transform: translateY(-5.5px) rot
     letter-spacing: -0.02em;
   }
   .hero-lead {
-    font-size: 15px; line-height: 1.5;
-    margin: 0 0 22px;
+    font-size: 15px; line-height: 1.55;
+    margin: 28px 0 32px;
   }
   .hero-cta {
     flex-direction: column; align-items: stretch;
-    gap: 8px; margin-bottom: 20px;
+    gap: 10px; margin-bottom: 32px;
   }
   .hero-cta .btn-primary.lg, .hero-cta .btn-ghost.lg {
-    width: 100%; padding: 13px 18px; font-size: 14px;
+    width: 100%; padding: 15px 18px; font-size: 14px;
   }
   .hero-meta { font-size: 10px; gap: 8px; flex-wrap: wrap; letter-spacing: 0.1em; }
   .hero-scroll { display: none; }
-  /* Scraps off on mobile — they crowd the title */
-  .hero-scraps { display: none !important; }
 
-  /* PROBLEMA — shorter scrub, taller frame for mobile */
+  /* Scraps on mobile — soft background texture, BEHIND the content.
+     Photos drift in corners with low opacity; one note adds a touch of color. */
+  .hero-scraps { display: block !important; opacity: 1; }
+  .hero-scraps .scrap { box-shadow: 0 8px 24px rgba(11,11,11,.10), 0 1px 3px rgba(11,11,11,.06); }
+  .hero-scraps .scrap.photo { opacity: .22; filter: saturate(0.85); }
+  .hero-scraps .scrap.note { display: none; }
+  /* Keep the red note visible as a small accent — bottom-left, small, low opacity */
+  .hero-scraps .scrap.note.s5 {
+    display: block; opacity: .55;
+    top: auto; bottom: 6%; right: auto; left: -18px;
+    width: 130px; padding: 10px 12px; font-size: 11px;
+    transform: rotate(-6deg);
+  }
+  .hero-scraps .scrap.note.s5 .lab { font-size: 9px; margin-bottom: 2px; }
+  /* Photos: re-place for a portrait viewport so they frame the text */
+  .hero-scraps .s1 {
+    top: 6%; right: -24px; width: 130px; aspect-ratio: 4/5;
+    transform: rotate(6deg);
+  }
+  .hero-scraps .s2 {
+    top: auto; bottom: 24%; right: -36px; width: 180px; aspect-ratio: 3/2;
+    transform: rotate(-4deg);
+  }
+  .hero-scraps .s3 {
+    display: none; /* keep the hero airy — two photos + one note is enough */
+  }
+
+  /* PROBLEMA — mobile uses autoplay-on-enter (no sticky scrub) */
   .problema .h-display { font-size: clamp(24px, 7vw, 34px); line-height: 1.08; }
   .problema .lead { font-size: 15px; margin-top: 14px; }
-  .scrub-stage { margin-top: 28px; height: 180vh; }
-  .scrub-track { top: 12vh; height: 72vh; }
+  .scrub-stage { margin-top: 28px; height: auto; }
+  .scrub-track { position: relative; top: 0; height: auto; padding: 8px 0 16px; }
   .scrub-frame { aspect-ratio: 3/4; width: 100%; }
   .chaos-grid .item {
     font-size: 9px; letter-spacing: 0.06em;

@@ -188,9 +188,11 @@
     }
   }
 
+  const isMobileScrub = () => window.matchMedia('(max-width: 768px)').matches;
+
   let scrubTicking = false;
   const onScrub = () => {
-    if (scrubTicking || !stage) return;
+    if (scrubTicking || !stage || isMobileScrub()) return;
     scrubTicking = true;
     requestAnimationFrame(() => {
       const rect = stage.getBoundingClientRect();
@@ -201,7 +203,42 @@
     });
   };
   window.addEventListener('scroll', onScrub, { passive: true });
-  onScrub();
+
+  // Mobile: autoplay chaos → order once when the stage enters the viewport.
+  // The scroll-scrubbed sticky pin doesn't feel right on touch scrolling and
+  // leaves an empty band after the animation, so on small screens we play it
+  // as a one-shot ~2.4s animation triggered by IntersectionObserver.
+  let mobilePlayed = false;
+  const playMobileScrub = () => {
+    if (mobilePlayed || !grid) return;
+    mobilePlayed = true;
+    const duration = 2400;
+    const start = performance.now();
+    const tick = (now) => {
+      const p = Math.min(1, (now - start) / duration);
+      applyScrub(ease(p));
+      if (p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
+  if (stage && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting && isMobileScrub()) {
+          playMobileScrub();
+          io.disconnect();
+        }
+      });
+    }, { threshold: 0.35 });
+    io.observe(stage);
+  }
+
+  // Initial paint: desktop uses scroll position; mobile starts at chaos (t=0)
+  if (isMobileScrub()) {
+    applyScrub(0);
+  } else {
+    onScrub();
+  }
 
   // ----- Map territori -----
   const territori = {
