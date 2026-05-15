@@ -1,0 +1,761 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8" />
+<title>Hearth — Il patrimonio dei territori, organizzato.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Hearth costruisce una base digitale viva del territorio. Contenuti, schede, guide, QR e portali sempre aggiornabili. Per Comuni, enti e operatori locali." />
+<meta name="theme-color" content="#FFF8E3" />
+<meta name="author" content="Hearth S.r.l. Società Benefit" />
+
+<!-- Open Graph / Twitter -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Hearth" />
+<meta property="og:title" content="Hearth — Il patrimonio dei territori, organizzato." />
+<meta property="og:description" content="Una base digitale viva del territorio. Contenuti, schede, guide, QR e portali sempre aggiornabili." />
+<meta property="og:image" content="assets/borgo-drone.jpg" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Hearth — Il patrimonio dei territori, organizzato." />
+<meta name="twitter:description" content="Una base digitale viva del territorio." />
+<meta name="twitter:image" content="assets/borgo-drone.jpg" />
+
+<link rel="icon" type="image/svg+xml" href="assets/hearth-icon-circle.svg" />
+<link rel="apple-touch-icon" href="assets/hearth-icon-circle.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="landing.css" />
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Hearth S.r.l. Società Benefit",
+  "url": "https://www.hearth.eu.com",
+  "email": "info@hearth.email",
+  "description": "Hearth costruisce una base digitale viva del territorio per Comuni, enti e operatori locali.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Monteforte Irpino",
+    "addressRegion": "AV",
+    "addressCountry": "IT"
+  }
+}
+</script>
+</head>
+<body data-lang="it" data-direction="editorial">
+
+<!-- Skip link -->
+<a class="skip-link" href="#top">Salta al contenuto</a>
+
+<!-- ============= NAV ============= -->
+<!-- ============= NAV ============= -->
+<header class="nav" id="nav">
+  <a class="nav-brand" href="#top" aria-label="Hearth — torna in cima">
+    <img src="assets/hearth-icon-circle.svg" alt="" />
+    <span class="nav-word-img" role="img" aria-label="Hearth"></span>
+  </a>
+  <nav class="nav-links" id="navLinks" aria-label="Navigazione principale">
+    <a href="#problema" data-i18n="nav_problem">Il problema</a>
+    <a href="#pilastri" data-i18n="nav_pillars">Pilastri</a>
+    <a href="#scheda" data-i18n="nav_card">Scheda</a>
+    <a href="#operatori" data-i18n="nav_op">Operatori</a>
+    <a href="#metodo" data-i18n="nav_method">Metodo</a>
+    <a href="#territori" data-i18n="nav_map">Territori</a>
+    <a href="#contatti" data-i18n="nav_contact">Contatti</a>
+  </nav>
+  <div class="nav-actions">
+    <button class="lang-toggle" id="langToggle" aria-label="Cambia lingua">
+      <span class="lt-it">IT</span><span class="lt-sep">·</span><span class="lt-en">EN</span>
+    </button>
+    <a class="btn-primary" href="#contatti" data-i18n="cta_nav">Parliamone</a>
+    <button class="nav-burger" id="navBurger" aria-label="Apri menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============= HERO ============= -->
+<section class="hero" id="top">
+  <div class="hero-grain" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="hero-mark">
+      <span class="dot"></span>
+      <span data-i18n="hero_kicker">SOCIETÀ BENEFIT · TERRITORIAL PLATFORM</span>
+    </div>
+    <h1 class="hero-title">
+      <span data-i18n="hero_l1">I territori hanno contenuti</span>
+      <span class="it" data-i18n="hero_l2">ovunque</span><span data-i18n="hero_l3">.</span>
+      <br/>
+      <span data-i18n="hero_l4">Ma</span> <span class="red" data-i18n="hero_l5">non un sistema</span><span data-i18n="hero_l6">.</span>
+    </h1>
+    <p class="hero-lead" data-i18n="hero_lead">
+      Hearth crea una base digitale viva del territorio.<br/>Contenuti, schede, guide, QR e portali — sempre aggiornabili.
+    </p>
+    <div class="hero-cta">
+      <a class="btn-primary lg" href="#contatti" data-i18n="cta_primary">Mappiamo il vostro territorio</a>
+      <a class="btn-ghost lg" href="#metodo" data-i18n="cta_secondary">Come funziona</a>
+    </div>
+    <div class="hero-meta">
+      <span data-i18n="hero_meta_for">Per Comuni, enti e operatori locali</span>
+      <span class="sep">·</span>
+      <span data-i18n="hero_meta_year">Overview 2026</span>
+    </div>
+  </div>
+  <!-- Scraps stage (decorative, scroll-parallaxed) -->
+  <div class="hero-scraps" aria-hidden="true" id="heroScraps">
+    <div class="scrap photo s1" style="background-image:url('assets/forno-ivana.jpg')"></div>
+    <div class="scrap photo s2" style="background-image:url('assets/borgo-drone.jpg')"></div>
+    <div class="scrap photo s3" style="background-image:url('assets/mercato-pesce.jpg')"></div>
+    <div class="scrap note s4"><span class="lab">Sito Comune · 2014</span>5 pagine, news 2019.</div>
+    <div class="scrap note red s5"><span class="lab">Volantino Sagra</span>Stampato. Mai online.</div>
+    <div class="scrap note s6"><span class="lab">Pro Loco · PDF</span>Itinerario su carta.</div>
+    <div class="scrap note blue s7"><span class="lab">Instagram</span>3 post · mese scorso.</div>
+  </div>
+  <a class="hero-scroll" href="#problema" aria-label="Scorri">
+    <span></span>
+  </a>
+</section>
+
+<!-- ============= PROBLEMA ============= -->
+<section class="section problema" id="problema">
+  <div class="band">
+    <span class="eyebrow"><span class="red">●</span>&nbsp;&nbsp;<span data-i18n="problem_eyebrow">01 / Stato attuale</span></span>
+    <h2 class="h-display">
+      <span data-i18n="problem_t1">Foto sparse. Social non coordinati.</span><br/>
+      <span data-i18n="problem_t2">Siti vecchi. PDF delle Pro Loco.</span><br/>
+      <span class="it" data-i18n="problem_t3">Eventi raccontati una volta e poi dimenticati.</span>
+    </h2>
+    <p class="lead" data-i18n="problem_lead">
+      Non manca comunicazione. <strong data-i18n="problem_lead_strong">Manca una base utilizzabile.</strong>
+    </p>
+  </div>
+  <!-- Pinned chaos → order scrub stage -->
+  <div class="scrub-stage" id="scrubStage">
+    <div class="scrub-track">
+      <div class="scrub-frame">
+        <div class="chaos-grid" id="chaosGrid">
+          <!-- 9 cards: scattered → grid via scroll -->
+        </div>
+        <div class="scrub-caption">
+          <span class="cap-from" data-i18n="scrub_from">DISPERSIONE</span>
+          <span class="cap-arrow"></span>
+          <span class="cap-to" data-i18n="scrub_to">SISTEMA</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= SOLUZIONE / 4 PILASTRI ============= -->
+<section class="section pilastri" id="pilastri">
+  <div class="band">
+    <span class="eyebrow"><span class="red">●</span>&nbsp;&nbsp;<span data-i18n="pillars_eyebrow">02 / Cosa raccontiamo</span></span>
+    <h2 class="h-display sm">
+      <span data-i18n="pillars_t1">Quattro pilastri per</span> <span class="it" data-i18n="pillars_t2">raccontare un territorio</span><span data-i18n="pillars_t3">.</span>
+    </h2>
+  </div>
+  <div class="pillar-grid">
+    <article class="pillar reveal" data-pillar="luoghi">
+      <div class="pillar-img" style="background-image:url('assets/borgo-drone.jpg')"></div>
+      <div class="pillar-body">
+        <span class="pillar-num">01</span>
+        <h3 class="pillar-ttl" data-i18n="pillar_1_ttl">Luoghi</h3>
+        <p data-i18n="pillar_1_meta">Borghi, chiese, sentieri, scorci. Ogni punto del territorio diventa una scheda viva.</p>
+      </div>
+    </article>
+    <article class="pillar reveal red" data-pillar="persone">
+      <div class="pillar-img" style="background-image:url('assets/forno-ivana.jpg')"></div>
+      <div class="pillar-body">
+        <span class="pillar-num">02</span>
+        <h3 class="pillar-ttl" data-i18n="pillar_2_ttl">Persone &amp; comunità</h3>
+        <p data-i18n="pillar_2_meta">Artigiani, contadini, custodi, associazioni. Il territorio è prima di tutto chi lo abita.</p>
+      </div>
+    </article>
+    <article class="pillar reveal ink" data-pillar="prodotti">
+      <div class="pillar-img" style="background-image:url('assets/mercato-pesce.jpg')"></div>
+      <div class="pillar-body">
+        <span class="pillar-num">03</span>
+        <h3 class="pillar-ttl" data-i18n="pillar_3_ttl">Prodotti &amp; attività</h3>
+        <p data-i18n="pillar_3_meta">Cibo, vino, mestieri, botteghe. L'economia locale diventa raccontabile.</p>
+      </div>
+    </article>
+    <article class="pillar reveal blue" data-pillar="eventi">
+      <div class="pillar-img" style="background-image:url('assets/falo-sagra.jpg')"></div>
+      <div class="pillar-body">
+        <span class="pillar-num">04</span>
+        <h3 class="pillar-ttl" data-i18n="pillar_4_ttl">Eventi &amp; stagionalità</h3>
+        <p data-i18n="pillar_4_meta">Sagre, mercati, ricorrenze, ritmi del paese. Il calendario reale del territorio.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============= SCHEDA LUOGO LIVE ============= -->
+<section class="section scheda" id="scheda">
+  <div class="band">
+    <span class="eyebrow"><span class="red">●</span>&nbsp;&nbsp;<span data-i18n="card_eyebrow">03 / La scheda viva</span></span>
+    <h2 class="h-display sm">
+      <span data-i18n="card_t1">Un solo nucleo digitale.</span><br/>
+      <span class="it" data-i18n="card_t2">Molti usi concreti, ogni giorno.</span>
+    </h2>
+    <p class="lead" data-i18n="card_lead">
+      Ogni luogo, persona, prodotto o evento entra in una scheda strutturata. Da lì nascono guide, mappe, QR, portali e materiali per i partner.
+    </p>
+  </div>
+
+  <div class="scheda-stage">
+    <!-- Mockup live: scheda + outputs -->
+    <div class="phone-frame reveal">
+      <div class="phone-notch"></div>
+      <div class="phone-screen">
+        <div class="ph-bar"><span></span><span></span><span></span></div>
+        <div class="ph-hero" style="background-image:url('assets/borgo-drone.jpg')">
+          <span class="ph-tag">Luogo · scheda viva</span>
+          <span class="ph-name" id="phName">Pieve di San Pietro</span>
+        </div>
+        <div class="ph-meta-row">
+          <span class="chip" id="phChip1">XII secolo</span>
+          <span class="chip" id="phChip2">Borgo Vecchio</span>
+          <span class="chip ok" id="phChip3">Aperto oggi</span>
+        </div>
+        <p class="ph-body" id="phBody">
+          La pieve domina il borgo dal IX secolo. Oggi è ancora un punto di incontro: il sabato pomeriggio le porte restano aperte fino al tramonto.
+        </p>
+        <div class="ph-actions">
+          <span class="ph-btn"><span class="ic">→</span><span data-i18n="card_act_1">Itinerario</span></span>
+          <span class="ph-btn ghost"><span class="ic">＋</span><span data-i18n="card_act_2">Salva</span></span>
+        </div>
+        <div class="ph-foot">
+          <span class="lab" data-i18n="card_foot_lab">Da questa scheda:</span>
+          <div class="ph-foot-tags">
+            <span>QR</span><span>Guida</span><span>Portale</span><span>App</span><span>Brochure</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Outputs orbiting the card -->
+    <div class="outputs">
+      <div class="op op-qr reveal">
+        <div class="qr-mini"></div>
+        <div class="op-text">
+          <span class="lab" data-i18n="out_qr_lab">QR sul territorio</span>
+          <span class="ttl" data-i18n="out_qr_ttl">Pannello in piazza</span>
+          <span class="meta" data-i18n="out_qr_meta">Stampato sul totem · porta alla scheda</span>
+        </div>
+      </div>
+      <div class="op op-guide reveal">
+        <div class="guide-mini">
+          <div class="g-row"><span></span><span style="width:60%"></span></div>
+          <div class="g-row"><span style="width:40%"></span><span style="width:55%"></span></div>
+          <div class="g-grid"><span></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="op-text">
+          <span class="lab" data-i18n="out_guide_lab">Guida digitale</span>
+          <span class="ttl" data-i18n="out_guide_ttl">Per il portale del Comune</span>
+          <span class="meta" data-i18n="out_guide_meta">Aggiornabile · riusabile per bandi</span>
+        </div>
+      </div>
+      <div class="op op-app reveal">
+        <div class="app-mini">
+          <div class="app-pin"></div>
+          <div class="app-row"><span class="r-dot"></span><span class="r-bar" style="width:70%"></span></div>
+          <div class="app-row"><span class="r-dot"></span><span class="r-bar" style="width:50%"></span></div>
+          <div class="app-row"><span class="r-dot"></span><span class="r-bar" style="width:60%"></span></div>
+        </div>
+        <div class="op-text">
+          <span class="lab" data-i18n="out_app_lab">App territoriale</span>
+          <span class="ttl" data-i18n="out_app_ttl">Cosa vivere ora</span>
+          <span class="meta" data-i18n="out_app_meta">Posizione · orari · stagioni</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= OPERATORI E PARTNER ============= -->
+<section class="section operatori" id="operatori">
+  <div class="band">
+    <span class="eyebrow"><span class="red">●</span>&nbsp;&nbsp;<span data-i18n="op_eyebrow">04 / Operatori e partner</span></span>
+    <h2 class="h-display sm">
+      <span data-i18n="op_t1">Non solo Comuni.</span> <span class="it" data-i18n="op_t2">Tutto il territorio.</span>
+    </h2>
+    <p class="lead" data-i18n="op_lead">
+      Botteghe, produttori, guide, esperienze. Hearth raccoglie e struttura anche chi il territorio lo abita ogni giorno.
+    </p>
+  </div>
+
+  <div class="op-grid">
+    <article class="op-card reveal">
+      <div class="op-img" style="background-image:url('assets/forno-ivana.jpg'); background-position: center 30%;">
+        <span class="op-pin red" data-i18n="op_1_pin">Accade ora</span>
+        <span class="op-cap" data-i18n="op_1_cap">Borgo Vecchio</span>
+      </div>
+      <div class="op-body">
+        <h3 class="op-ttl" data-i18n="op_1_ttl">Forno a legna dei Silvestri</h3>
+        <p class="op-meta">
+          <span data-i18n="op_1_m1">Borgo Vecchio</span><span class="dot">·</span>
+          <span data-i18n="op_1_m2">aperto</span><span class="dot">·</span>
+          <span data-i18n="op_1_m3">pane caldo</span>
+        </p>
+        <p class="op-quote" data-i18n="op_1_q">"Apre alle 7. Pane caldo da 7 minuti."</p>
+        <span class="op-tag" data-i18n="op_1_tag">Visibile in guida · attivabile ora</span>
+      </div>
+    </article>
+
+    <article class="op-card reveal">
+      <div class="op-img" style="background-image:url('assets/nicola-pescatore.jpg'); background-position: center 35%;">
+        <span class="op-pin" data-i18n="op_2_pin">Ritmo locale</span>
+        <span class="op-cap" data-i18n="op_2_cap">Porto vivo</span>
+      </div>
+      <div class="op-body">
+        <h3 class="op-ttl" data-i18n="op_2_ttl">Nicola, pescatore</h3>
+        <p class="op-meta">
+          <span data-i18n="op_2_m1">Porto vivo</span><span class="dot">·</span>
+          <span data-i18n="op_2_m2">rientro barche</span><span class="dot">·</span>
+          <span data-i18n="op_2_m3">ogni mattina</span>
+        </p>
+        <p class="op-quote" data-i18n="op_2_q">"Il pesce arriva quando il paese si sveglia."</p>
+        <span class="op-tag" data-i18n="op_2_tag">Storia locale · contenuto narrativo</span>
+      </div>
+    </article>
+
+    <article class="op-card reveal">
+      <div class="op-img" style="background-image:url('assets/anna-vendemmia.jpg'); background-position: center 30%;">
+        <span class="op-pin blue" data-i18n="op_3_pin">Esperienza</span>
+        <span class="op-cap" data-i18n="op_3_cap">Cantina · settembre</span>
+      </div>
+      <div class="op-body">
+        <h3 class="op-ttl" data-i18n="op_3_ttl">Vendemmia con Giovanni</h3>
+        <p class="op-meta">
+          <span data-i18n="op_3_m1">Cantina</span><span class="dot">·</span>
+          <span data-i18n="op_3_m2">4h</span><span class="dot">·</span>
+          <span data-i18n="op_3_m3">settembre / ottobre</span>
+        </p>
+        <p class="op-quote" data-i18n="op_3_q">"Tre filari, una tavola, un racconto vero."</p>
+        <span class="op-tag" data-i18n="op_3_tag">Esperienza · costruibile con partner</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============= TRUST / HANNO SCELTO HEARTH ============= -->
+<section class="trust" id="trust">
+  <div class="trust-band">
+    <span class="trust-lab" data-i18n="trust_lab">Hanno scelto Hearth</span>
+    <div class="trust-marks">
+      <a class="trust-mark" href="caso-capraia.html"><span class="tm-name">Capraia</span><span class="tm-sub" data-i18n="tm_capraia">Isola · LI</span></a>
+      <a class="trust-mark" href="caso-vergemoli.html"><span class="tm-name">Fabbriche di Vergemoli</span><span class="tm-sub" data-i18n="tm_vergemoli">Borghi diffusi · LU</span></a>
+      <a class="trust-mark" href="caso-agnone.html"><span class="tm-name">Agnone</span><span class="tm-sub" data-i18n="tm_agnone">Area interna · IS</span></a>
+      <a class="trust-mark" href="caso-firenze.html"><span class="tm-name">Firenze</span><span class="tm-sub" data-i18n="tm_firenze">Città d'arte · FI</span></a>
+    </div>
+    <p class="trust-foot" data-i18n="trust_foot">
+      + nuove attivazioni in corso. <a href="#contatti" data-i18n="trust_cta">Aggiungete il vostro territorio →</a>
+    </p>
+  </div>
+</section>
+
+<!-- ============= METODO ============= -->
+<section class="section metodo" id="metodo">
+  <div class="band">
+    <span class="eyebrow"><span class="red">●</span>&nbsp;&nbsp;<span data-i18n="method_eyebrow">05 / Come funziona</span></span>
+    <h2 class="h-display sm">
+      <span data-i18n="method_t1">Dal territorio</span> <span class="it" data-i18n="method_t2">alla piattaforma</span><span data-i18n="method_t3">.</span>
+    </h2>
+  </div>
+  <ol class="timeline" id="timeline">
+    <li class="step reveal">
+      <span class="step-num">01</span>
+      <h3 class="step-ttl" data-i18n="step_1_ttl">Mappatura e priorità</h3>
+      <p data-i18n="step_1_meta">Capiamo cosa raccontare prima, dove iniziare, quali contenuti contano davvero.</p>
+    </li>
+    <li class="step reveal">
+      <span class="step-num">02</span>
+      <h3 class="step-ttl" data-i18n="step_2_ttl">Produzione contenuti</h3>
+      <p data-i18n="step_2_meta">Foto, video e testi raccolti sul campo, con la comunità.</p>
+    </li>
+    <li class="step reveal">
+      <span class="step-num">03</span>
+      <h3 class="step-ttl" data-i18n="step_3_ttl">Strutturazione digitale</h3>
+      <p data-i18n="step_3_meta">Ogni contenuto diventa una scheda ordinata, riusabile, ricercabile.</p>
+    </li>
+    <li class="step reveal">
+      <span class="step-num">04</span>
+      <h3 class="step-ttl" data-i18n="step_4_ttl">Pubblicazione e attivazione</h3>
+      <p data-i18n="step_4_meta">Guide, mappe, QR, schede e materiali pronti all'uso.</p>
+    </li>
+    <li class="step reveal live">
+      <span class="step-num">05</span>
+      <h3 class="step-ttl" data-i18n="step_5_ttl">Aggiornamento continuo</h3>
+      <p data-i18n="step_5_meta">La base resta viva e cambia con il territorio, anno dopo anno.</p>
+    </li>
+  </ol>
+</section>
+
+<!-- ============= TERRITORI MAP ============= -->
+<section class="section territori" id="territori">
+  <div class="band">
+    <span class="eyebrow"><span class="red">●</span>&nbsp;&nbsp;<span data-i18n="map_eyebrow">06 / Casi attivati</span></span>
+    <h2 class="h-display sm">
+      <span data-i18n="map_t1">Lo abbiamo già fatto in territori</span> <span class="it" data-i18n="map_t2">molto diversi</span><span data-i18n="map_t3">.</span>
+    </h2>
+    <p class="lead" data-i18n="map_lead">
+      Capraia, Agnone, Fabbriche di Vergemoli, Firenze. Isole, borghi, aree interne, città d'arte. Patrimoni diversi, stesso metodo.
+    </p>
+  </div>
+  <div class="map-stage">
+    <div class="map-canvas" id="mapCanvas">
+      <div class="map-frame">
+      <svg class="map-italy" viewBox="0 0 500 820" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+        <!-- Italy mainland — hand-traced polygon following actual coastline points -->
+        <path d="
+          M 112 96
+          Q 132 58, 178 56
+          Q 238 48, 290 60
+          Q 336 72, 365 102
+          L 358 130
+          L 354 154
+          L 332 162
+          L 308 170
+          L 296 196
+          L 296 224
+          L 302 248
+          L 318 276
+          L 332 304
+          L 344 332
+          L 354 360
+          L 364 384
+          L 386 400
+          L 416 408
+          L 432 422
+          L 422 440
+          L 432 462
+          L 454 480
+          L 470 498
+          L 480 514
+          L 478 530
+          L 460 540
+          L 442 540
+          L 422 532
+          L 404 524
+          L 388 522
+          L 384 542
+          L 392 560
+          L 408 580
+          L 422 600
+          L 426 624
+          L 416 644
+          L 396 664
+          L 380 686
+          L 364 696
+          L 348 686
+          L 336 668
+          L 328 646
+          L 326 620
+          L 332 596
+          L 336 572
+          L 326 548
+          L 314 528
+          L 302 506
+          L 288 486
+          L 274 470
+          L 258 452
+          L 240 432
+          L 222 410
+          L 210 386
+          L 200 360
+          L 194 336
+          L 192 312
+          L 188 290
+          L 178 268
+          L 162 252
+          L 142 244
+          L 118 234
+          L 92 222
+          L 80 208
+          L 86 188
+          L 94 168
+          L 92 144
+          L 100 122
+          L 108 104
+          Z
+        " fill="#F2E3B6" stroke="#0B0B0B" stroke-width="1.4" stroke-linejoin="round" />
+
+        <!-- Gargano spur (Puglia, juts east — drawn as a separate convex bulge) -->
+        <path d="M 412 400 Q 442 388, 460 398 Q 458 412, 440 414 Q 420 414, 412 408 Z"
+              fill="#F2E3B6" stroke="#0B0B0B" stroke-width="1.4" stroke-linejoin="round" />
+
+        <!-- Salento / heel — extension from main path -->
+        <path d="M 472 528 L 484 542 L 470 558 L 452 562 L 444 552 Z"
+              fill="#F2E3B6" stroke="#0B0B0B" stroke-width="1.4" stroke-linejoin="round" />
+
+        <!-- Sicilia — triangle south of toe, with Trapani NW point -->
+        <path d="
+          M 188 716
+          L 220 706
+          L 270 702
+          L 320 702
+          L 364 706
+          L 392 714
+          L 408 730
+          L 410 752
+          L 396 778
+          L 366 794
+          L 320 798
+          L 268 790
+          L 220 776
+          L 192 760
+          L 180 740
+          L 184 724
+          Z
+        " fill="#F2E3B6" stroke="#0B0B0B" stroke-width="1.4" stroke-linejoin="round" />
+
+        <!-- Sardegna — oblong west of mainland -->
+        <path d="
+          M 78 358
+          L 114 360
+          L 138 376
+          L 144 410
+          L 146 446
+          L 142 478
+          L 122 488
+          L 92 488
+          L 70 472
+          L 58 442
+          L 52 410
+          L 58 380
+          Z
+        " fill="#F2E3B6" stroke="#0B0B0B" stroke-width="1.4" stroke-linejoin="round" />
+
+        <!-- Capraia (small island off Tuscan coast) -->
+        <circle cx="158" cy="298" r="3.5" fill="#F2E3B6" stroke="#0B0B0B" stroke-width="1" />
+        <!-- Elba (slightly larger island just below Capraia) -->
+        <circle cx="176" cy="318" r="4.5" fill="#F2E3B6" stroke="#0B0B0B" stroke-width="1" />
+      </svg>
+      <!-- Pins overlay (positioned in % relative to .map-frame, which matches SVG aspect) -->
+      <button class="map-pin" data-pin="capraia" style="left:31.6%; top:36.3%" aria-label="Vedi caso: Capraia">
+        <span class="pin-dot" aria-hidden="true"></span>
+        <span class="pin-label">Capraia</span>
+      </button>
+      <button class="map-pin" data-pin="vergemoli" style="left:36%; top:32.3%" aria-label="Vedi caso: Fabbriche di Vergemoli">
+        <span class="pin-dot red" aria-hidden="true"></span>
+        <span class="pin-label">Vergemoli</span>
+      </button>
+      <button class="map-pin" data-pin="firenze" style="left:43%; top:35.4%" aria-label="Vedi caso: Firenze">
+        <span class="pin-dot ink" aria-hidden="true"></span>
+        <span class="pin-label">Firenze</span>
+      </button>
+      <button class="map-pin" data-pin="agnone" style="left:64%; top:46.1%" aria-label="Vedi caso: Agnone">
+        <span class="pin-dot" aria-hidden="true"></span>
+        <span class="pin-label">Agnone</span>
+      </button>
+      </div>
+    </div>
+    <aside class="map-detail" id="mapDetail">
+      <div class="md-img" id="mdImg" style="background-image:url('assets/borgo-drone.jpg')"></div>
+      <span class="md-tag" id="mdTag">Isola</span>
+      <h3 class="md-name" id="mdName">Capraia</h3>
+      <p class="md-type" id="mdType">Isola · comunità · ritmi locali</p>
+      <div class="md-out"><span class="lab">Output</span><span id="mdOut">Luoghi · persone · guida digitale</span></div>
+      <div class="md-stats">
+        <div><span class="k" id="mdK1">42</span><span class="v" data-i18n="map_stat_places">luoghi</span></div>
+        <div><span class="k" id="mdK2">18</span><span class="v" data-i18n="map_stat_people">persone</span></div>
+        <div><span class="k" id="mdK3">26</span><span class="v" data-i18n="map_stat_events">eventi</span></div>
+      </div>
+      <a class="md-link" id="mdLink" href="caso-capraia.html" data-i18n="map_read_case">Leggi il caso completo →</a>
+    </aside>
+  </div>
+</section>
+
+<!-- ============= MODELLO ============= -->
+<section class="section modello" id="modello">
+  <div class="band">
+    <span class="eyebrow"><span class="red">●</span>&nbsp;&nbsp;<span data-i18n="model_eyebrow">07 / Il modello</span></span>
+    <h2 class="h-display sm">
+      <span data-i18n="model_t1">Attivazione iniziale</span> <span class="it" data-i18n="model_t2">+ aggiornamento nel tempo</span><span data-i18n="model_t3">.</span>
+    </h2>
+  </div>
+  <div class="model-grid">
+    <article class="model-card start reveal">
+      <span class="m-num">01</span>
+      <span class="m-tag" data-i18n="model_phase_1">Fase 1 · una tantum</span>
+      <h3 class="m-ttl" data-i18n="model_1_ttl">Start — il nucleo digitale</h3>
+      <p data-i18n="model_1_meta">Costruzione iniziale della base: mappatura, contenuti, schede, archivio e prima pubblicazione.</p>
+      <div class="m-foot" data-i18n="model_1_foot">Avvio in pochi mesi</div>
+    </article>
+    <article class="model-card cont reveal">
+      <span class="m-num">02</span>
+      <span class="m-tag" data-i18n="model_phase_2">Fase 2 · annuale</span>
+      <h3 class="m-ttl" data-i18n="model_2_ttl">Continuità — la base che resta viva</h3>
+      <p data-i18n="model_2_meta">Canone annuale per aggiornare contenuti, aggiungere nuove schede e mantenere guide, QR e materiali sempre utilizzabili.</p>
+      <div class="m-foot" data-i18n="model_2_foot">Ricorrente</div>
+    </article>
+  </div>
+  <p class="model-foot" data-i18n="model_foot">
+    Durata minima consigliata: <strong>tre anni</strong>. La valorizzazione territoriale non è una campagna spot.
+  </p>
+</section>
+
+<!-- ============= IMPATTO ============= -->
+<section class="section impatto" id="impatto">
+  <div class="band">
+    <span class="eyebrow"><span class="red">●</span>&nbsp;&nbsp;<span data-i18n="impact_eyebrow">08 / Impatto</span></span>
+    <h2 class="h-display sm">
+      <span data-i18n="impact_t1">Più ordine. Più contenuti.</span> <span class="it" data-i18n="impact_t2">Più capacità di valorizzare.</span>
+    </h2>
+  </div>
+  <ul class="impact-grid">
+    <li class="impact reveal"><span class="i-num">01</span><h3 data-i18n="imp_1_t">Territorio più leggibile</h3><p data-i18n="imp_1_m">Un solo punto da cui partire per capire cosa c'è e perché conta.</p></li>
+    <li class="impact reveal accent"><span class="i-num">02</span><h3 data-i18n="imp_2_t">Contenuti riutilizzabili</h3><p data-i18n="imp_2_m">Una scheda, molti usi: portale, QR, social, brochure, bandi.</p></li>
+    <li class="impact reveal"><span class="i-num">03</span><h3 data-i18n="imp_3_t">Rete locale coordinata</h3><p data-i18n="imp_3_m">Comune, operatori e comunità lavorano su una base condivisa.</p></li>
+    <li class="impact reveal"><span class="i-num">04</span><h3 data-i18n="imp_4_t">Pronti per bandi</h3><p data-i18n="imp_4_m">Materiali ordinati, citabili e riutilizzabili quando servono.</p></li>
+    <li class="impact reveal"><span class="i-num">05</span><h3 data-i18n="imp_5_t">Meno ripartenze da zero</h3><p data-i18n="imp_5_m">Ogni nuovo progetto parte da contenuti già pronti.</p></li>
+  </ul>
+</section>
+
+<!-- ============= CREATOR — GANCIO ============= -->
+<section class="creator-gancio" id="creator">
+  <div class="cg-inner">
+    <div class="cg-left">
+      <span class="eyebrow" style="color: var(--hearth-red); margin-bottom: 20px;"><span class="red">●</span>&nbsp;&nbsp;<span data-i18n="cg_eyebrow">Per i creator</span></span>
+      <h2 class="cg-title">
+        <span data-i18n="cg_t1">Conosci il tuo territorio?</span><br/>
+        <span class="it" data-i18n="cg_t2">Raccontalo con noi</span><span data-i18n="cg_t3">.</span>
+      </h2>
+      <p class="cg-lead" data-i18n="cg_lead">
+        Hearth si costruisce con creator locali: fotografi, videomaker, testimoni del territorio. Scarica l'app Creator, supera il primo contenuto e diventi parte della rete.
+      </p>
+      <div class="cg-benefits">
+        <div class="cg-b"><span class="cg-b-n">01</span><span data-i18n="cg_b_1">Compenso diretto sui progetti speciali</span></div>
+        <div class="cg-b"><span class="cg-b-n">02</span><span data-i18n="cg_b_2">Hearth Coin · partecipi al fatturato mensile</span></div>
+        <div class="cg-b"><span class="cg-b-n">03</span><span data-i18n="cg_b_3">Crediti editoriali con i tuoi contatti</span></div>
+        <div class="cg-b"><span class="cg-b-n">04</span><span data-i18n="cg_b_4">Badge Creator Hearth verificato</span></div>
+      </div>
+      <div class="cg-cta">
+        <a class="btn-primary lg" href="creator.html" data-i18n="cg_cta_more">Scopri il programma →</a>
+        <div class="cg-stores">
+          <a class="cg-store" href="#" aria-label="Scarica su App Store">
+            <svg viewBox="0 0 24 24" aria-hidden="true" width="20" height="20"><path fill="currentColor" d="M17.05 20.28c-.98.95-2.05.8-3.08.35c-1.09-.46-2.09-.48-3.24 0c-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8c1.18-.24 2.31-.93 3.57-.84c1.51.12 2.65.72 3.4 1.8c-3.12 1.87-2.38 5.98.48 7.13c-.57 1.5-1.31 2.99-2.54 4.08zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25c.29 2.58-2.34 4.5-3.74 4.25z"></path></svg>
+            <span><small>Scarica su</small><strong>App Store</strong></span>
+          </a>
+          <a class="cg-store" href="#" aria-label="Scarica su Google Play">
+            <svg viewBox="0 0 24 24" aria-hidden="true" width="20" height="20"><path fill="currentColor" d="M3.609 1.814L13.792 12L3.61 22.186a.997.997 0 0 1-.61-.92V2.734c0-.36.221-.69.609-.92zm10.89 10.893l2.302 2.302l-10.937 6.32l8.635-8.622zm3.199-3.198l2.807 1.623c.842.488.842 1.717 0 2.205l-2.808 1.622l-2.491-2.491l2.492-2.959zM5.864 2.658L16.802 8.98l-2.303 2.303-8.635-8.625z"></path></svg>
+            <span><small>Scarica su</small><strong>Google Play</strong></span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="cg-right" aria-hidden="true">
+      <div class="cg-phone">
+        <div class="cg-phone-notch"></div>
+        <div class="cg-phone-screen">
+          <div class="cg-app-bar">
+            <span class="cg-dot"></span>
+            <span>Hearth · Creator</span>
+          </div>
+          <div class="cg-task">
+            <span class="cg-tag" data-i18n="cg_task_tag">Contenuto in corso</span>
+            <h4 data-i18n="cg_task_name">Forno Silvestri · Borgo Vecchio</h4>
+            <p data-i18n="cg_task_meta">Apertura ore 7 · 3 scatti + 1 reel + scheda</p>
+            <div class="cg-progress"><span style="width:65%"></span></div>
+            <span class="cg-progress-lab"><span data-i18n="cg_progress">2 / 3 elementi completati</span></span>
+          </div>
+          <div class="cg-coins">
+            <div>
+              <span class="cg-coins-lab" data-i18n="cg_coins_lab">Hearth Coin questo mese</span>
+              <span class="cg-coins-n">128</span>
+            </div>
+            <div class="cg-coins-icon" aria-hidden="true">◐</div>
+          </div>
+          <div class="cg-badge">
+            <span class="cg-badge-mark">✓</span>
+            <span><strong data-i18n="cg_badge_t">Creator verificato</strong><br/><small data-i18n="cg_badge_m">Da gennaio 2026</small></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= CTA / CONTATTI ============= -->
+<section class="section contatti" id="contatti">
+  <div class="contatti-grid">
+    <div class="contatti-left">
+      <div class="hero-mark">
+        <span class="dot red"></span>
+        <span data-i18n="contact_kicker">Hearth · Società Benefit</span>
+      </div>
+      <h2 class="closing-title">
+        <span data-i18n="contact_t1">Hai un territorio da</span> <span class="it" data-i18n="contact_t2">organizzare</span><span data-i18n="contact_t3">?</span>
+      </h2>
+      <p class="lead" data-i18n="contact_lead">
+        Partiamo dal primo nucleo digitale. Mappiamo, produciamo e organizziamo. Poi resta vivo nel tempo.
+      </p>
+    </div>
+    <form class="contatti-form" id="contactForm" data-formspree-endpoint="https://formspree.io/f/mqenopjw">
+      <label>
+        <span data-i18n="form_who">Chi sei</span>
+        <select name="role" required>
+          <option value="" data-i18n="form_who_ph">Seleziona…</option>
+          <option value="comune" data-i18n="form_who_1">Comune / ente pubblico</option>
+          <option value="operatore" data-i18n="form_who_2">Operatore / partner locale</option>
+          <option value="proloco" data-i18n="form_who_3">Pro Loco / associazione</option>
+          <option value="altro" data-i18n="form_who_4">Altro</option>
+        </select>
+      </label>
+      <label>
+        <span data-i18n="form_territory">Territorio</span>
+        <input type="text" name="territory" required data-i18n-ph="form_territory_ph" placeholder="Comune, area, isola…" />
+      </label>
+      <label>
+        <span data-i18n="form_email">Email</span>
+        <input type="email" name="email" required placeholder="nome@comune.it" />
+      </label>
+      <label class="full">
+        <span data-i18n="form_msg">Cosa vorreste raccontare</span>
+        <textarea name="message" rows="3" data-i18n-ph="form_msg_ph" placeholder="Anche solo due righe…"></textarea>
+      </label>
+      <button type="submit" class="btn-primary lg full" data-i18n="form_send">Scrivici</button>
+      <p class="form-note">
+        <span data-i18n="form_or">Oppure scrivici a</span> <a href="mailto:info@hearth.email">info@hearth.email</a>
+      </p>
+    </form>
+  </div>
+</section>
+
+<!-- ============= FOOTER ============= -->
+<footer class="footer">
+  <div class="foot-grid">
+    <div class="foot-brand">
+      <img src="assets/hearth-icon-circle.svg" alt="" />
+      <div>
+        <div class="foot-word-img" role="img" aria-label="Hearth"></div>
+        <div class="foot-sub" data-i18n="foot_sub">Il patrimonio dei territori, organizzato.</div>
+      </div>
+    </div>
+    <div class="foot-cols">
+      <div>
+        <div class="foot-h" data-i18n="foot_h_contact">Contatti</div>
+        <a href="mailto:info@hearth.email">info@hearth.email</a>
+        <a href="https://www.hearth.eu.com" target="_blank" rel="noopener">www.hearth.eu.com</a>
+      </div>
+      <div>
+        <div class="foot-h" data-i18n="foot_h_legal">Legal</div>
+        <span>Hearth · Società Benefit</span>
+        <span data-i18n="foot_legal_2">Overview 2026</span>
+      </div>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 Hearth</span>
+    <span data-i18n="foot_made">Made for territories</span>
+  </div>
+</footer>
+
+<script src="landing.js"></script>
+</body>
+</html>
