@@ -119,9 +119,9 @@
 
   // 9 items: 3 photos + 6 notes. Authored CHAOS positions and ORDER (3x3 grid) positions.
   const items = [
-    { type: 'photo', src: 'assets/forno-ivana.jpg',   chaos: { x: 8,  y: 6,  w: 22, h: 30, rot: -7 } },
-    { type: 'photo', src: 'assets/borgo-drone.jpg',   chaos: { x: 64, y: 10, w: 26, h: 28, rot: 5  } },
-    { type: 'photo', src: 'assets/mercato-pesce.jpg', chaos: { x: 38, y: 64, w: 24, h: 30, rot: -3 } },
+    { type: 'photo', src: '../assets/forno-ivana.jpg',   chaos: { x: 8,  y: 6,  w: 22, h: 30, rot: -7 } },
+    { type: 'photo', src: '../assets/borgo-drone.jpg',   chaos: { x: 64, y: 10, w: 26, h: 28, rot: 5  } },
+    { type: 'photo', src: '../assets/mercato-pesce.jpg', chaos: { x: 38, y: 64, w: 24, h: 30, rot: -3 } },
     { type: 'note',  variant: '',     lab: 'Sito Comune · 2014',  body: '5 pagine, news 2019.',     chaos: { x: 36, y: 8,  w: 20, h: 16, rot: 4 } },
     { type: 'note',  variant: 'red',  lab: 'Volantino Sagra',     body: 'Stampato. Mai online.',    chaos: { x: 84, y: 48, w: 14, h: 18, rot: -6 } },
     { type: 'note',  variant: '',     lab: 'Pro Loco · PDF',      body: 'Itinerario su carta.',     chaos: { x: 4,  y: 66, w: 18, h: 16, rot: 3  } },
@@ -205,10 +205,10 @@
 
   // ----- Map territori -----
   const territori = {
-    capraia:   { tag: 'Isola',         name: 'Capraia',                 type: 'Isola · comunità · ritmi locali',   out: 'Luoghi · persone · guida digitale', img: 'assets/borgo-drone.jpg',     k: [42, 18, 26] },
-    agnone:    { tag: 'Area interna',  name: 'Agnone',                  type: 'Tradizioni · artigianato · identità', out: 'Botteghe · persone · patrimonio',  img: 'assets/fonderia-campane.jpg', k: [56, 24, 14] },
-    vergemoli: { tag: 'Borghi diffusi',name: 'Fabbriche di Vergemoli',  type: 'Borghi diffusi · natura · percorsi', out: 'Luoghi · sentieri · mappa',         img: 'assets/vergemoli-ponte.jpg', k: [38, 12, 9]  },
-    firenze:   { tag: "Città d'arte",  name: 'Firenze',                 type: "Città d'arte · esperienze · operatori", out: 'Percorsi · schede · contenuti',  img: 'assets/firenze-duomo.jpg',   k: [72, 31, 48] },
+    capraia:   { tag: 'Isola',         name: 'Capraia',                 type: 'Isola · comunità · ritmi locali',   out: 'Luoghi · persone · guida digitale', img: '../assets/borgo-drone.jpg',     k: [42, 18, 26] },
+    agnone:    { tag: 'Area interna',  name: 'Agnone',                  type: 'Tradizioni · artigianato · identità', out: 'Botteghe · persone · patrimonio',  img: '../assets/fonderia-campane.jpg', k: [56, 24, 14] },
+    vergemoli: { tag: 'Borghi diffusi',name: 'Fabbriche di Vergemoli',  type: 'Borghi diffusi · natura · percorsi', out: 'Luoghi · sentieri · mappa',         img: '../assets/vergemoli-ponte.jpg', k: [38, 12, 9]  },
+    firenze:   { tag: "Città d'arte",  name: 'Firenze',                 type: "Città d'arte · esperienze · operatori", out: 'Percorsi · schede · contenuti',  img: '../assets/firenze-duomo.jpg',   k: [72, 31, 48] },
   };
   const pins = document.querySelectorAll('.map-pin');
   const md = {

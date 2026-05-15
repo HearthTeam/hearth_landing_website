@@ -5,14 +5,14 @@
    ============================================================ */
 
 /* ---------- Fonts (Albra, copied from /fonts) ---------- */
-@font-face { font-family: "Albra Display"; src: url("fonts/Albra-Display-Light.otf") format("opentype"); font-weight: 300; font-style: normal; font-display: swap; }
-@font-face { font-family: "Albra Display"; src: url("fonts/Albra-Display-Regular.otf") format("opentype"); font-weight: 400; font-style: normal; font-display: swap; }
-@font-face { font-family: "Albra Display"; src: url("fonts/Albra-Display-Medium.otf") format("opentype"); font-weight: 500; font-style: normal; font-display: swap; }
-@font-face { font-family: "Albra Display"; src: url("fonts/Albra-Display-Semi.otf") format("opentype"); font-weight: 600; font-style: normal; font-display: swap; }
-@font-face { font-family: "Albra Display"; src: url("fonts/Albra-Display-Bold.otf") format("opentype"); font-weight: 700; font-style: normal; font-display: swap; }
-@font-face { font-family: "Albra"; src: url("fonts/Albra-Regular.otf") format("opentype"); font-weight: 400; font-style: normal; font-display: swap; }
-@font-face { font-family: "Albra"; src: url("fonts/Albra-Light.otf") format("opentype"); font-weight: 300; font-style: normal; font-display: swap; }
-@font-face { font-family: "Albra"; src: url("fonts/Albra-Light-Italic.ttf") format("truetype"); font-weight: 300; font-style: italic; font-display: swap; }
+@font-face { font-family: "Albra Display"; src: url("../fonts/Albra-Display-Light.otf") format("opentype"); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: "Albra Display"; src: url("../fonts/Albra-Display-Regular.otf") format("opentype"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Albra Display"; src: url("../fonts/Albra-Display-Medium.otf") format("opentype"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Albra Display"; src: url("../fonts/Albra-Display-Semi.otf") format("opentype"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Albra Display"; src: url("../fonts/Albra-Display-Bold.otf") format("opentype"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Albra"; src: url("../fonts/Albra-Regular.otf") format("opentype"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Albra"; src: url("../fonts/Albra-Light.otf") format("opentype"); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: "Albra"; src: url("../fonts/Albra-Light-Italic.ttf") format("truetype"); font-weight: 300; font-style: italic; font-display: swap; }
 
 :root {
   --cream:#FFF8E3; --cream-2:#FBF1D0; --paper:#EFE2BE;
@@ -154,8 +154,8 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
   display: inline-block;
   width: 110px; height: 24px;
   background-color: var(--ink);
-  -webkit-mask: url("assets/hearth-wordmark.svg") left center / contain no-repeat;
-          mask: url("assets/hearth-wordmark.svg") left center / contain no-repeat;
+  -webkit-mask: url("../assets/hearth-wordmark.svg") left center / contain no-repeat;
+          mask: url("../assets/hearth-wordmark.svg") left center / contain no-repeat;
 }
 .nav-links {
   display: flex; gap: 28px;
@@ -1024,8 +1024,8 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
   display: inline-block;
   width: 150px; height: 32px;
   background-color: var(--cream);
-  -webkit-mask: url("assets/hearth-wordmark.svg") left center / contain no-repeat;
-          mask: url("assets/hearth-wordmark.svg") left center / contain no-repeat;
+  -webkit-mask: url("../assets/hearth-wordmark.svg") left center / contain no-repeat;
+          mask: url("../assets/hearth-wordmark.svg") left center / contain no-repeat;
 }
 .foot-sub { font-size: 13px; color: rgba(255,248,227,.6); margin-top: 2px; }
 .foot-cols {
@@ -1586,3 +1586,367 @@ body.menu-open .nav-burger span:nth-child(3) { transform: translateY(-5.5px) rot
   transition: background .2s ease, transform .15s ease;
 }
 .md-link:hover { background: var(--hearth-red); transform: translateY(-1px); }
+
+
+/* ============================================================
+   MOBILE POLISH — comprehensive < 768px / < 480px
+   Tighter type scale, horizontal rails for grids, snug padding.
+   ============================================================ */
+
+/* Reusable horizontal-rail primitive (mobile only — see media queries below) */
+.h-rail {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 4px;
+}
+.h-rail::-webkit-scrollbar { display: none; }
+.h-rail > * {
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --pad: 18px;
+    --section-py: 56px;
+    --t-h2: clamp(26px, 7vw, 36px);
+    --t-h3: 19px;
+    --t-lead: 15px;
+    --t-body: 15px;
+    --t-eyebrow: 11px;
+  }
+
+  /* NAV */
+  .nav { padding: 10px var(--pad); gap: 10px; }
+  .nav-actions { gap: 8px; }
+  .lang-toggle { padding: 4px 8px; font-size: 11px; }
+  .nav-burger { width: 34px; height: 34px; }
+  .nav-brand img { width: 24px; height: 24px; }
+  .nav-word-img { width: 86px; height: 18px; }
+
+  /* Section frame */
+  .section { padding: var(--section-py) var(--pad); }
+  .eyebrow { font-size: 11px; margin-bottom: 16px; letter-spacing: 0.14em; }
+  .h-display { font-size: clamp(28px, 8vw, 40px); line-height: 1.05; }
+  .h-display.sm { font-size: clamp(24px, 7vw, 34px); line-height: 1.08; }
+  .lead { font-size: 15px; line-height: 1.5; margin-top: 16px; }
+
+  /* HERO — declutter, hide all scraps, smaller padding */
+  .hero {
+    min-height: auto;
+    padding: 40px var(--pad) 48px;
+  }
+  .hero-mark { margin-bottom: 18px; font-size: 10px; letter-spacing: 0.14em; }
+  .hero-title {
+    font-size: clamp(32px, 9vw, 44px);
+    line-height: 1.02;
+    margin: 0 0 18px;
+    letter-spacing: -0.02em;
+  }
+  .hero-lead {
+    font-size: 15px; line-height: 1.5;
+    margin: 0 0 22px;
+  }
+  .hero-cta {
+    flex-direction: column; align-items: stretch;
+    gap: 8px; margin-bottom: 20px;
+  }
+  .hero-cta .btn-primary.lg, .hero-cta .btn-ghost.lg {
+    width: 100%; padding: 13px 18px; font-size: 14px;
+  }
+  .hero-meta { font-size: 10px; gap: 8px; flex-wrap: wrap; letter-spacing: 0.1em; }
+  .hero-scroll { display: none; }
+  /* Scraps off on mobile — they crowd the title */
+  .hero-scraps { display: none !important; }
+
+  /* PROBLEMA — shorter scrub, taller frame for mobile */
+  .problema .h-display { font-size: clamp(24px, 7vw, 34px); line-height: 1.08; }
+  .problema .lead { font-size: 15px; margin-top: 14px; }
+  .scrub-stage { margin-top: 28px; height: 180vh; }
+  .scrub-track { top: 12vh; height: 72vh; }
+  .scrub-frame { aspect-ratio: 3/4; width: 100%; }
+  .chaos-grid .item {
+    font-size: 9px; letter-spacing: 0.06em;
+    padding: 6px;
+  }
+  .chaos-grid .item .lab {
+    padding: 2px 5px; font-size: 9px;
+  }
+  .scrub-caption {
+    font-size: 9px; letter-spacing: 0.12em;
+    padding: 6px 12px; gap: 8px;
+    bottom: 12px;
+  }
+  .scrub-caption .cap-arrow { width: 14px; }
+
+  /* PILASTRI — horizontal scroll rail */
+  .pillar-grid {
+    display: flex;
+    grid-template-columns: none;
+    gap: 12px;
+    margin-top: 24px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 4px var(--pad) 4px var(--pad);
+    margin-left: calc(-1 * var(--pad));
+    margin-right: calc(-1 * var(--pad));
+  }
+  .pillar-grid::-webkit-scrollbar { display: none; }
+  .pillar {
+    flex: 0 0 78%;
+    scroll-snap-align: start;
+    max-width: 280px;
+  }
+  .pillar-img { aspect-ratio: 4/3; }
+  .pillar-body { padding: 16px 16px 18px; }
+  .pillar-num { font-size: 11px; margin-bottom: 6px; }
+  .pillar-ttl { font-size: 19px; margin-bottom: 6px; }
+  .pillar p { font-size: 13.5px; line-height: 1.45; }
+
+  /* SCHEDA — phone shrink + outputs as horizontal rail */
+  .scheda-stage {
+    grid-template-columns: 1fr;
+    gap: 28px; margin-top: 28px;
+  }
+  .phone-frame {
+    width: 280px; height: 560px;
+    transform: none;
+    padding: 11px;
+    border-radius: 38px;
+  }
+  .phone-notch { width: 90px; height: 18px; }
+  .phone-screen { border-radius: 28px; }
+  .ph-hero { height: 160px; margin: 0 10px; }
+  .ph-name { font-size: 18px; }
+  .ph-body { font-size: 12.5px; padding: 8px 14px 10px; line-height: 1.45; }
+  .ph-meta-row { padding: 10px 14px 4px; gap: 4px; }
+  .ph-meta-row .chip { font-size: 10px; padding: 3px 7px; }
+  .ph-actions { padding: 0 14px 10px; }
+  .ph-actions .ph-btn { font-size: 11px; padding: 7px 10px; }
+  .ph-foot { padding: 10px 14px 14px; }
+  .ph-foot .lab { font-size: 9px; }
+  .ph-foot-tags span { font-size: 10px; padding: 3px 6px; }
+
+  .outputs {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 4px var(--pad);
+    margin-left: calc(-1 * var(--pad));
+    margin-right: calc(-1 * var(--pad));
+  }
+  .outputs::-webkit-scrollbar { display: none; }
+  .op {
+    flex: 0 0 78%;
+    max-width: 280px;
+    scroll-snap-align: start;
+    grid-template-columns: 64px 1fr;
+    gap: 14px; padding: 14px;
+  }
+  .op .lab { font-size: 10px; }
+  .op .ttl { font-size: 16px; line-height: 1.2; }
+  .op .meta { font-size: 12px; margin-top: 4px; }
+  .qr-mini, .guide-mini, .app-mini { width: 64px; height: 64px; }
+
+  /* OPERATORI — horizontal scroll rail */
+  .op-grid {
+    display: flex;
+    grid-template-columns: none;
+    gap: 12px;
+    margin-top: 24px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 4px var(--pad);
+    margin-left: calc(-1 * var(--pad));
+    margin-right: calc(-1 * var(--pad));
+  }
+  .op-grid::-webkit-scrollbar { display: none; }
+  .op-grid > .op-card {
+    flex: 0 0 80%;
+    max-width: 300px;
+    scroll-snap-align: start;
+    grid-column: auto !important;
+  }
+  .op-card .op-img { aspect-ratio: 5/4; }
+  .op-pin { font-size: 9px; padding: 4px 8px; }
+  .op-cap { font-size: 11px; }
+  .op-body { padding: 16px 16px 18px; gap: 6px; }
+  .op-ttl { font-size: 18px; line-height: 1.18; }
+  .op-quote { font-size: 13.5px; padding-left: 10px; line-height: 1.35; }
+  .op-meta { font-size: 12px; }
+  .op-tag { font-size: 10px; padding-top: 10px; }
+
+  /* TRUST */
+  .trust { padding: 32px var(--pad); }
+  .trust-band { gap: 16px; }
+  .trust-marks { gap: 14px 22px; }
+  .trust-mark .tm-name { font-size: 16px; }
+  .trust-mark .tm-sub { font-size: 9px; letter-spacing: 0.1em; }
+  .trust-foot { font-size: 12px; }
+  .trust-lab { font-size: 10px; letter-spacing: 0.18em; }
+
+  /* METODO timeline */
+  .timeline { margin-top: 32px; }
+  .timeline::before { left: 14px; top: 8px; }
+  .timeline .step { padding: 0 0 28px 44px; }
+  .timeline .step::before { left: 6px; top: 4px; width: 13px; height: 13px; border-width: 1.5px; }
+  .timeline .step-ttl { font-size: 20px; line-height: 1.12; margin: 4px 0 6px; }
+  .timeline .step p { font-size: 14px; line-height: 1.45; }
+  .timeline .step-num { font-size: 10px; }
+
+  /* TERRITORI map */
+  .map-stage { gap: 16px; margin-top: 28px; }
+  .map-canvas { min-height: 280px; padding: 12px; }
+  .map-frame { max-width: 200px; }
+  .map-pin .pin-label {
+    font-size: 9px; padding: 2px 6px; letter-spacing: 0.04em;
+  }
+  .map-pin .pin-dot {
+    width: 12px; height: 12px;
+    box-shadow: 0 0 0 3px var(--cream), 0 2px 5px rgba(11,11,11,.2);
+  }
+  .map-detail { padding: 16px; gap: 10px; }
+  .md-img { aspect-ratio: 16/9; }
+  .md-tag { font-size: 10px; }
+  .md-name { font-size: 26px; }
+  .md-type { font-size: 12.5px; }
+  .md-out { font-size: 13px; padding-top: 10px; }
+  .md-out .lab { font-size: 9px; }
+  .md-stats { gap: 6px; padding-top: 12px; }
+  .md-stats .k { font-size: 22px; }
+  .md-stats .v { font-size: 9px; letter-spacing: 0.1em; }
+  .md-link { font-size: 12px; padding: 8px 12px; }
+
+  /* MODELLO */
+  .model-grid { gap: 12px; margin-top: 32px; }
+  .model-card { padding: 22px 18px; gap: 8px; }
+  .m-num { font-size: 38px; }
+  .m-tag { font-size: 10px; }
+  .m-ttl { font-size: 21px; line-height: 1.12; }
+  .model-card p { font-size: 13.5px; line-height: 1.5; }
+  .m-foot { font-size: 11px; padding-top: 10px; }
+  .model-foot { font-size: 13px; margin-top: 20px; padding: 0 8px; }
+
+  /* IMPATTO — horizontal scroll rail */
+  .impact-grid {
+    display: flex;
+    grid-template-columns: none;
+    gap: 12px;
+    margin-top: 32px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 4px var(--pad);
+    margin-left: calc(-1 * var(--pad));
+    margin-right: calc(-1 * var(--pad));
+  }
+  .impact-grid::-webkit-scrollbar { display: none; }
+  .impact-grid > .impact {
+    flex: 0 0 74%;
+    max-width: 260px;
+    scroll-snap-align: start;
+    padding: 18px;
+  }
+  .impact h3 { font-size: 17px; line-height: 1.2; }
+  .impact p { font-size: 13px; line-height: 1.45; }
+  .i-num { font-size: 24px; }
+
+  /* CREATOR GANCIO */
+  .creator-gancio { padding: 48px var(--pad); }
+  .cg-inner { gap: 32px; }
+  .cg-title { font-size: clamp(26px, 7.5vw, 38px); line-height: 1.06; margin-bottom: 16px; }
+  .cg-lead { font-size: 14.5px; margin: 0 0 22px; line-height: 1.5; }
+  .cg-benefits { gap: 0; margin-bottom: 24px; grid-template-columns: 1fr; }
+  .cg-b { font-size: 13.5px; padding: 10px 0; gap: 12px; }
+  .cg-b-n { font-size: 14px; }
+  .cg-cta { gap: 14px; flex-direction: column; align-items: stretch; }
+  .cg-cta .btn-primary.lg { width: 100%; padding: 13px 18px; font-size: 14px; }
+  .cg-stores { width: 100%; gap: 8px; }
+  .cg-store { flex: 1; padding: 9px 12px 9px 10px; }
+  .cg-store strong { font-size: 12.5px; }
+  .cg-store small { font-size: 8px; }
+  .cg-phone { width: 260px; }
+  .cg-phone-screen { padding: 28px 12px 16px; gap: 10px; }
+  .cg-task h4 { font-size: 14px; }
+  .cg-task p { font-size: 10.5px; }
+  .cg-coins-n { font-size: 24px; }
+  .cg-coins-lab { font-size: 8px; }
+  .cg-badge strong { font-size: 13px; }
+  .cg-badge small { font-size: 9.5px; }
+
+  /* CONTATTI */
+  .contatti { padding: 48px var(--pad); }
+  .contatti-grid { gap: 28px; }
+  .closing-title { font-size: clamp(28px, 8vw, 44px); line-height: 1.02; }
+  .contatti .lead { font-size: 15px; }
+  .contatti-form { padding: 18px 16px; gap: 12px; grid-template-columns: 1fr; }
+  .contatti-form label { font-size: 10px; }
+  .contatti-form input,
+  .contatti-form select,
+  .contatti-form textarea { font-size: 14.5px; }
+  .form-note { font-size: 12px; }
+
+  /* FOOTER */
+  .footer { padding: 28px var(--pad) 20px; }
+  .foot-grid { gap: 20px; grid-template-columns: 1fr; }
+  .foot-cols { gap: 18px; }
+  .foot-brand img { width: 28px; height: 28px; }
+  .foot-word-img { width: 100px; height: 22px; }
+  .foot-sub { font-size: 12px; }
+  .foot-h { font-size: 10px; }
+  .foot-cols > div, .foot-cols a { font-size: 13px; }
+  .foot-bottom {
+    flex-direction: column; gap: 6px;
+    align-items: flex-start;
+    padding-top: 14px; margin-top: 20px;
+    font-size: 10px;
+  }
+}
+
+/* Phone narrow — iPhone SE and below */
+@media (max-width: 420px) {
+  .hero-title { font-size: clamp(28px, 8.5vw, 38px); }
+
+  .pillar { flex-basis: 82%; }
+  .op-grid > .op-card { flex-basis: 84%; }
+  .impact-grid > .impact { flex-basis: 78%; }
+  .outputs > .op { flex-basis: 84%; }
+
+  .phone-frame { width: 264px; height: 528px; }
+  .ph-hero { height: 150px; }
+
+  .map-frame { max-width: 180px; }
+  .map-pin .pin-label { display: none; }
+  .map-pin.active .pin-label {
+    display: inline-block;
+    position: absolute; bottom: -22px; left: 50%;
+    transform: translateX(-50%);
+    background: var(--ink); color: var(--cream); border-color: var(--ink);
+  }
+
+  .cg-phone { width: 240px; }
+  .cg-stores { flex-direction: column; }
+  .cg-store { width: 100%; }
+
+  .foot-cols { grid-template-columns: 1fr; gap: 14px; }
+
+  .trust-marks { gap: 12px 18px; }
+  .trust-band { grid-template-columns: 1fr; }
+}
+
+/* Prevent any horizontal overflow safety net */
+@media (max-width: 768px) {
+  html, body { overflow-x: hidden; max-width: 100vw; }
+}
